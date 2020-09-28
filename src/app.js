@@ -11,9 +11,11 @@ app.use(cookieParser());
 app.use('/api/v1', router);
 
 
-//Creating an express server
-const port = 3000;
-app.listen(port, (err)=>{
-    if(err) console.error("Error ");
-    console.log(`Express API is listening at port : ${port}`)
-})
+// //Creating an express server
+// const port = 3000;
+// app.listen(port, (err)=>{
+//     if(err) console.error("Error ");
+//     console.log(`Express API is listening at port : ${port}`)
+// })
+
+module.exports = app
