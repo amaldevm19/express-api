@@ -1,5 +1,5 @@
 
-const db = require('./pool')
+const db = require('./db')
 
 class Model{
     constructor(table){

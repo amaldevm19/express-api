@@ -1,5 +1,5 @@
 
-const db = require("../models/pool")
+const db = require("../models/db")
 const messageTable = require('./queries')
 
 const executeQueryArray = async arr => new Promise (resolve =>{
