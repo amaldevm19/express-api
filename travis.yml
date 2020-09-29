@@ -7,8 +7,6 @@ matrix:
   - node_js: '12'
 cache:
   directories: [node_modules]
-install:
-  yarn
 deploy:
   provider: heroku
   app:
