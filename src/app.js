@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use('/api/v1', router);
 
+  
 
 // //Creating an express server
 // const port = 3000;
@@ -17,5 +18,7 @@ app.use('/api/v1', router);
 //     if(err) console.error("Error ");
 //     console.log(`Express API is listening at port : ${port}`)
 // })
-
+app.use((err, req, res, next) => {
+    res.status(400).json({ error: err.stack });
+  });
 module.exports = app

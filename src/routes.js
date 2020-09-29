@@ -6,6 +6,6 @@ var router = express.Router();
 
 router.get('/', homeController.homePage)
 router.get('/messages', messagesController.messagePage)
-router.post('/messages',middleware.modifyMessage, messagesController.addMessage)
+router.post('/messages',middleware.modifyMessage, middleware.performAsyncAction, messagesController.addMessage)
 
 module.exports = router;
