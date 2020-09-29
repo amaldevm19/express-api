@@ -8,8 +8,9 @@ matrix:
 cache:
   directories: [node_modules]
 install:
-  npm
+  yarn
 deploy:
   provider: heroku
   app:
     master: mighty-harbor-55894
+  app_key: 7444b7b2-61ae-46c5-a907-70c4fcb74ff2
