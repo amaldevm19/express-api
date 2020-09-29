@@ -1,9 +1,7 @@
 var express = require('express');
-const testEnvironmentVariable  = require("./config")
+const homeController = require('./controller/home')
 var router = express.Router();
 
-router.get('/', (req, res, next)=>{
-    return res.status(200).json({message: testEnvironmentVariable })
-})
+router.get('/', homeController.homePage)
 
 module.exports = router;
